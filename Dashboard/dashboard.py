@@ -23,7 +23,7 @@ st.markdown("""
 # Sidebar untuk Personalisasi
 with st.sidebar:
     st.title("👤 Farhan Rasyad")
-    st.image("Dashboard/e-commerce.jpeg", caption="E-Commerce Dashboard", use_column_width=True)
+    st.image("Dashboard/e-commerce.jpeg", caption="E-Commerce Dashboard", use_container_width=True)
     
     # Input Nama Pengguna
     user_name = st.text_input("Masukkan Nama Anda", "Pengguna")
