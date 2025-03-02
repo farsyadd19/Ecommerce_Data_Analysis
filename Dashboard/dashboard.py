@@ -55,7 +55,7 @@ with st.sidebar:
         max_value=max_date
     )
     
-    # Mode Gelap/Terang
+     # Mode Gelap/Terang
     dark_mode = st.checkbox("Mode Gelap")
     if dark_mode:
         st.markdown("""
@@ -63,6 +63,12 @@ with st.sidebar:
             body {
                 background-color: #121212;
                 color: #ffffff;
+            }
+            .stApp {
+                background-color: #121212;
+            }
+            .css-1d391kg {
+                background-color: #1e1e1e;
             }
             </style>
             """, unsafe_allow_html=True)
