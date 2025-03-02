@@ -54,23 +54,7 @@ with st.sidebar:
         min_value=min_date,
         max_value=max_date
     )
-
-     # Filter Kategori Produk
-    product_categories = all_data['product_category_name_english'].unique()
-    selected_category = st.multiselect(
-        "Pilih Kategori Produk",
-        options=product_categories,
-        default=product_categories
-    )
-
-    # Filter Negara Bagian
-    states = all_data['customer_state'].unique()
-    selected_states = st.multiselect(
-        "Pilih Negara Bagian",
-        options=states,
-        default=states
-    )
-
+    
     # Mode Gelap/Terang
     dark_mode = st.checkbox("Mode Gelap")
     if dark_mode:
