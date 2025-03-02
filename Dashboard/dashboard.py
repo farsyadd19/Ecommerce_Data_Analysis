@@ -30,8 +30,8 @@ with st.sidebar:
     st.write(f"Halo, {user_name}! Selamat datang di dashboard kami.")
 
     # Load dataset
-    all_data = pd.read_csv("C:/Users/farha/Documents/STREAMLIT LASKAR AI/all_data.csv")
-    customer_location_data = pd.read_csv("C:/Users/farha/Documents/STREAMLIT LASKAR AI/Geolocation.csv")
+    all_data = pd.read_csv("Dashboard/all_data.csv")
+    customer_location_data = pd.read_csv("Data/Geolocation.csv")
 
     datetime_cols = [
         "order_approved_at", 
