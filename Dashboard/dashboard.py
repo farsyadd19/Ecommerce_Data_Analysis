@@ -77,8 +77,16 @@ total_sales_revenue = filtered_df['payment_value'].sum()
 total_orders = filtered_df['order_id'].nunique()
 total_product_categories = filtered_df['product_category_name_english'].nunique()
 
-# Tampilkan KPI dalam kolom
-col1, col2, col3, col4, col5 = st.columns(5)
+# Tampilkan Total Sales Revenue di kolom tersendiri 
+st.subheader("Total Sales Revenue")
+st.metric(
+    label="Total Sales Revenue",
+    value=format_currency(total_sales_revenue, 'BRL', locale='pt_BR')
+)
+
+# Tampilkan KPI lainnya dalam 4 kolom
+st.subheader("Other Key Metrics")
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.metric(label="Total Buyers", value=total_buyers)
@@ -87,12 +95,9 @@ with col2:
     st.metric(label="Avg Review Score", value=f"{avg_review_score:.2f}")
 
 with col3:
-    st.metric(label="Total Sales Revenue", value=format_currency(total_sales_revenue, 'BRL', locale='pt_BR'))
-
-with col4:
     st.metric(label="Total Orders", value=total_orders)
 
-with col5:
+with col4:
     st.metric(label="Total Product Categories", value=total_product_categories)
 
 # Visualisasi 1: Tren Pertumbuhan Penjualan
