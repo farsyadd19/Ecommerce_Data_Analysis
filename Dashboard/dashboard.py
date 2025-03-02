@@ -55,23 +55,7 @@ with st.sidebar:
         max_value=max_date
     )
     
-     # Mode Gelap/Terang
-    dark_mode = st.checkbox("Mode Gelap")
-    if dark_mode:
-        st.markdown("""
-            <style>
-            body {
-                background-color: #121212;
-                color: #ffffff;
-            }
-            .stApp {
-                background-color: #121212;
-            }
-            .css-1d391kg {
-                background-color: #1e1e1e;
-            }
-            </style>
-            """, unsafe_allow_html=True)
+
 
 # Konversi start_date dan end_date ke Timestamp
 start_date = pd.Timestamp(start_date)
