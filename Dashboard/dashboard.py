@@ -59,20 +59,30 @@ with st.sidebar:
     dark_mode = st.checkbox("Mode Gelap")
     if dark_mode:
         st.markdown("""
-            <style>
-            body {
-                background-color: #121212;
-                color: #ffffff;
-            }
-            .stApp {
-                background-color: #121212;
-            }
-            .css-1d391kg {
-                background-color: #1e1e1e;
-            }
-            </style>
-            """, unsafe_allow_html=True)
-
+        <style>
+        body {
+            background-color: #121212;
+            color: yellow;
+        }
+        .stApp {
+            background-color: #121212;
+        }
+        .css-1d391kg {
+            background-color: #1e1e1e;
+        }
+        /* Ubah warna teks pada elemen Streamlit tertentu */
+        .stMarkdown p {
+            color: yellow !important;
+        }
+        .stTextInput input {
+            color: yellow !important;
+        }
+        .stSelectbox div {
+            color: yellow !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
 # Konversi start_date dan end_date ke Timestamp
 start_date = pd.Timestamp(start_date)
 end_date = pd.Timestamp(end_date)
